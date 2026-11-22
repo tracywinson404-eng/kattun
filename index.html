@@ -32,6 +32,12 @@
   .overlay{position:fixed;inset:0;z-index:100;background:#f9f6ed;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px 16px;transition:opacity .9s ease, transform .9s ease}
   .overlay.hide{opacity:0;transform:translateY(-30px);pointer-events:none}
   .kat-title{display:flex;align-items:center;gap:22px;font-size:32px;letter-spacing:.15em}
+  @keyframes flyIn{0%{opacity:0;transform:translateY(-36px) translateX(-18px) rotate(-8deg)}100%{opacity:1;transform:none}}
+  .kat-title span{animation:flyIn .8s ease both}
+  .kat-title span:nth-child(1){animation-delay:.05s}
+  .kat-title span:nth-child(2){animation-delay:.15s}
+  .kat-title span:nth-child(3){animation-delay:.25s}
+  .flip{animation:flyIn .7s ease both;animation-delay:.35s}
   .cross{width:26px;height:26px;position:relative}
   .cross span{position:absolute;left:50%;top:0;width:1px;height:26px;background:#2c2924;transform:translateX(-50%) rotate(0deg)}
   .two-col{display:flex;gap:12px;width:min(360px,88vw)}
