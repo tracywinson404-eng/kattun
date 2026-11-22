@@ -49,13 +49,13 @@ video{width:100%;aspect-ratio:16/9;background:#000;border-radius:8px;display:blo
 <div class="copy">© 2026 formerkattun.com &nbsp;·&nbsp; JUST FOR FUN</div>
 </div>
 <audio id="bgm" src="bgm 2.mp3" loop preload="auto"></audio>
-<button class="music-btn" id="musicBtn">♪ 播放音樂</button>
+<button class="music-btn" id="musicBtn">🎁</button>
 <script>
 var bgm=document.getElementById('bgm');var btn=document.getElementById('musicBtn');var started=false;
-function tryPlay(){bgm.play().then(function(){started=true;btn.textContent='♪ 暫停音樂';}).catch(function(){});}
+function tryPlay(){bgm.play().then(function(){started=true;btn.textContent='🎉';}).catch(function(){});}
 document.addEventListener('click',function(){if(!started) tryPlay();});
 document.addEventListener('touchstart',function(){if(!started) tryPlay();});
-btn.addEventListener('click',function(e){e.stopPropagation();if(bgm.paused){bgm.play();btn.textContent='♪ 暫停音樂';}else{bgm.pause();btn.textContent='♪ 播放音樂';}});
+btn.addEventListener('click',function(e){e.stopPropagation();if(bgm.paused){bgm.play();btn.textContent='🎉';}else{bgm.pause();btn.textContent='🎁';}});
 tryPlay();
 </script>
 </body>
